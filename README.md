@@ -12,4 +12,4 @@
 - 采用Django内置的认证系统进行登录校验——自定义用户类、校验装饰器
 - 支付宝接口
 ### 项目页面展示：
-![image](https://github.com/haoforward/E-commerce-website-dailyfresh/raw/master/display_image/index.png)
+![image](https://github.com/haoforward/E-commerce-website-dailyfresh/raw/master/display_images/index.png)
