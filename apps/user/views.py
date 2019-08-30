@@ -287,16 +287,7 @@ class UserInfoView(LoginRequiredMixin, View):
         # 获取用户最新浏览的5个商品的id
         sku_ids = con.lrange(history_key, 0, 4) # [2,3,1]
 
-        # 从数据库中查询用户浏览的商品的具体信息
-        # goods_li = GoodsSKU.objects.filter(id__in=sku_ids)
-        #
-        # goods_res = []
-        # for a_id in sku_ids:
-        #     for goods in goods_li:
-        #         if a_id == goods.id:
-        #             goods_res.append(goods)
-
-        # 遍历获取用户浏览的商品信息
+        # 遍历这5个商品的id获取用户浏览的详细商品信息
         goods_li = []
         for id in sku_ids:
             goods = GoodsSKU.objects.get(id=id)
